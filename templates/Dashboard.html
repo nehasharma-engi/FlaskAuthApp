@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+    <!-- ✅ Welcome Card -->
+    <div class="card shadow-lg p-4 text-center">
+        <h2 class="mb-3">Welcome, {{ user.name }} 👋</h2>
+        <p class="text-muted">You are successfully logged in.</p>
+
+        <hr>
+
+        <!-- ✅ User Info -->
+        <p><strong>Email:</strong> {{ user.email }}</p>
+
+        <!-- ✅ Actions -->
+        <div class="mt-4">
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}

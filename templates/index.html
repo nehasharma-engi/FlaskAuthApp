@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5 text-center">
+
+    <!-- ✅ Heading -->
+    <h1 class="mb-3">Welcome to Flask Auth App 🔐</h1>
+    <p class="text-muted">Secure login and registration system using Flask</p>
+
+    <hr class="my-4">
+
+    <!-- ✅ Buttons based on login status -->
+    {% if 'email' in session %}
+        <a href="/dashboard" class="btn btn-success me-2">Go to Dashboard</a>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    {% else %}
+        <a href="/login" class="btn btn-primary me-2">Login</a>
+        <a href="/register" class="btn btn-outline-primary">Register</a>
+    {% endif %}
+
+</div>
+
+{% endblock body %}
